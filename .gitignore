@@ -58,7 +58,10 @@ crashlytics-build.properties
 fabric.properties
 
 # project file
-cargo-remote.iml
+rustle.iml
 
 # test config file
-.cargo-remote.toml
+.cargo/rustle.toml
+
+# JetBrains IDE directory
+.idea/
