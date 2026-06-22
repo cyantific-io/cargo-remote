@@ -1,0 +1,13 @@
+[package]
+name = "rustle-agent"
+description = "Remote-side sync agent for rustle: diffs/prunes/prepares the build tree in one round-trip"
+version.workspace = true
+authors.workspace = true
+license.workspace = true
+edition.workspace = true
+repository.workspace = true
+
+# IMPORTANT: this crate MUST stay dependency-free (std only). It is compiled by rustle-core's
+# build.rs with a bare `rustc` (no cargo, no registry, no network) and embedded into the cli/mcp,
+# which deploy the resulting *binary* to remotes. A single external dependency would break that.
+[dependencies]
